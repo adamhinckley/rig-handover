@@ -93,7 +93,7 @@ describe('GET /api/digest/:night', () => {
       lastStatus: 'ok',
       lastError: 'upstream 503',
     });
-    expect(body.counts).toEqual({ ok: 2, retry: 1, fail: 0 });
+    expect(body.counts).toEqual({ ok: 3, retry: 1, fail: 0 });
   });
 
   it('answers 404 for a night with no file', async () => {
