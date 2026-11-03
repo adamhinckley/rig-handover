@@ -12,8 +12,8 @@ export type RunLine = {
   error?: string;
 };
 
-// One row per job. Times keep the log's offset; owner and lastError stay null here and the
-// views render them as `—`.
+// One row per job. Times keep the log's offset. lastError is the latest error the job logged,
+// even if a later run was ok. owner and lastError stay null here; the views render `—`.
 export type DigestRow = {
   job: string;
   owner: string | null;
